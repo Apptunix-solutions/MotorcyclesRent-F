@@ -10,33 +10,245 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as JobsRouteImport } from './routes/jobs'
+import { Route as MaintenanceRouteImport } from './routes/maintenance'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as PartnerRouteImport } from './routes/partner'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
+import { Route as DashboardEarningsRouteImport } from './routes/dashboard.earnings'
+import { Route as DashboardJobsRouteImport } from './routes/dashboard.jobs'
+import { Route as DashboardMaintenanceRouteImport } from './routes/dashboard.maintenance'
+import { Route as DashboardMotorcycleRouteImport } from './routes/dashboard.motorcycle'
+import { Route as DashboardNotificationsRouteImport } from './routes/dashboard.notifications'
+import { Route as DashboardProfileRouteImport } from './routes/dashboard.profile'
+import { Route as DashboardRentalRouteImport } from './routes/dashboard.rental'
+import { Route as DashboardSupportRouteImport } from './routes/dashboard.support'
+import { Route as MotorcyclesIndexRouteImport } from './routes/motorcycles.index'
+import { Route as MotorcyclesBikeIdRouteImport } from './routes/motorcycles.$bikeId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsRoute = JobsRouteImport.update({
+  id: '/jobs',
+  path: '/jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaintenanceRoute = MaintenanceRouteImport.update({
+  id: '/maintenance',
+  path: '/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerRoute = PartnerRouteImport.update({
+  id: '/partner',
+  path: '/partner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/dashboard/',
+  path: '/dashboard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardEarningsRoute = DashboardEarningsRouteImport.update({
+  id: '/dashboard/earnings',
+  path: '/dashboard/earnings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardJobsRoute = DashboardJobsRouteImport.update({
+  id: '/dashboard/jobs',
+  path: '/dashboard/jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardMaintenanceRoute = DashboardMaintenanceRouteImport.update({
+  id: '/dashboard/maintenance',
+  path: '/dashboard/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardMotorcycleRoute = DashboardMotorcycleRouteImport.update({
+  id: '/dashboard/motorcycle',
+  path: '/dashboard/motorcycle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardNotificationsRoute = DashboardNotificationsRouteImport.update({
+  id: '/dashboard/notifications',
+  path: '/dashboard/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardProfileRoute = DashboardProfileRouteImport.update({
+  id: '/dashboard/profile',
+  path: '/dashboard/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRentalRoute = DashboardRentalRouteImport.update({
+  id: '/dashboard/rental',
+  path: '/dashboard/rental',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardSupportRoute = DashboardSupportRouteImport.update({
+  id: '/dashboard/support',
+  path: '/dashboard/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MotorcyclesIndexRoute = MotorcyclesIndexRouteImport.update({
+  id: '/motorcycles/',
+  path: '/motorcycles/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MotorcyclesBikeIdRoute = MotorcyclesBikeIdRouteImport.update({
+  id: '/motorcycles/$bikeId',
+  path: '/motorcycles/$bikeId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/jobs': typeof JobsRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/onboarding': typeof OnboardingRoute
+  '/partner': typeof PartnerRoute
+  '/dashboard/earnings': typeof DashboardEarningsRoute
+  '/dashboard/jobs': typeof DashboardJobsRoute
+  '/dashboard/maintenance': typeof DashboardMaintenanceRoute
+  '/dashboard/motorcycle': typeof DashboardMotorcycleRoute
+  '/dashboard/notifications': typeof DashboardNotificationsRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/rental': typeof DashboardRentalRoute
+  '/dashboard/support': typeof DashboardSupportRoute
+  '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/dashboard/': typeof DashboardIndexRoute
+  '/motorcycles/': typeof MotorcyclesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/jobs': typeof JobsRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/onboarding': typeof OnboardingRoute
+  '/partner': typeof PartnerRoute
+  '/dashboard/earnings': typeof DashboardEarningsRoute
+  '/dashboard/jobs': typeof DashboardJobsRoute
+  '/dashboard/maintenance': typeof DashboardMaintenanceRoute
+  '/dashboard/motorcycle': typeof DashboardMotorcycleRoute
+  '/dashboard/notifications': typeof DashboardNotificationsRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/rental': typeof DashboardRentalRoute
+  '/dashboard/support': typeof DashboardSupportRoute
+  '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/dashboard': typeof DashboardIndexRoute
+  '/motorcycles': typeof MotorcyclesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/jobs': typeof JobsRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/onboarding': typeof OnboardingRoute
+  '/partner': typeof PartnerRoute
+  '/dashboard/earnings': typeof DashboardEarningsRoute
+  '/dashboard/jobs': typeof DashboardJobsRoute
+  '/dashboard/maintenance': typeof DashboardMaintenanceRoute
+  '/dashboard/motorcycle': typeof DashboardMotorcycleRoute
+  '/dashboard/notifications': typeof DashboardNotificationsRoute
+  '/dashboard/profile': typeof DashboardProfileRoute
+  '/dashboard/rental': typeof DashboardRentalRoute
+  '/dashboard/support': typeof DashboardSupportRoute
+  '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/dashboard/': typeof DashboardIndexRoute
+  '/motorcycles/': typeof MotorcyclesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/how-it-works'
+    | '/jobs'
+    | '/maintenance'
+    | '/onboarding'
+    | '/partner'
+    | '/dashboard/earnings'
+    | '/dashboard/jobs'
+    | '/dashboard/maintenance'
+    | '/dashboard/motorcycle'
+    | '/dashboard/notifications'
+    | '/dashboard/profile'
+    | '/dashboard/rental'
+    | '/dashboard/support'
+    | '/motorcycles/$bikeId'
+    | '/dashboard/'
+    | '/motorcycles/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/how-it-works'
+    | '/jobs'
+    | '/maintenance'
+    | '/onboarding'
+    | '/partner'
+    | '/dashboard/earnings'
+    | '/dashboard/jobs'
+    | '/dashboard/maintenance'
+    | '/dashboard/motorcycle'
+    | '/dashboard/notifications'
+    | '/dashboard/profile'
+    | '/dashboard/rental'
+    | '/dashboard/support'
+    | '/motorcycles/$bikeId'
+    | '/dashboard'
+    | '/motorcycles'
+  id:
+    | '__root__'
+    | '/'
+    | '/how-it-works'
+    | '/jobs'
+    | '/maintenance'
+    | '/onboarding'
+    | '/partner'
+    | '/dashboard/earnings'
+    | '/dashboard/jobs'
+    | '/dashboard/maintenance'
+    | '/dashboard/motorcycle'
+    | '/dashboard/notifications'
+    | '/dashboard/profile'
+    | '/dashboard/rental'
+    | '/dashboard/support'
+    | '/motorcycles/$bikeId'
+    | '/dashboard/'
+    | '/motorcycles/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  JobsRoute: typeof JobsRoute
+  MaintenanceRoute: typeof MaintenanceRoute
+  OnboardingRoute: typeof OnboardingRoute
+  PartnerRoute: typeof PartnerRoute
+  DashboardEarningsRoute: typeof DashboardEarningsRoute
+  DashboardJobsRoute: typeof DashboardJobsRoute
+  DashboardMaintenanceRoute: typeof DashboardMaintenanceRoute
+  DashboardMotorcycleRoute: typeof DashboardMotorcycleRoute
+  DashboardNotificationsRoute: typeof DashboardNotificationsRoute
+  DashboardProfileRoute: typeof DashboardProfileRoute
+  DashboardRentalRoute: typeof DashboardRentalRoute
+  DashboardSupportRoute: typeof DashboardSupportRoute
+  MotorcyclesBikeIdRoute: typeof MotorcyclesBikeIdRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
+  MotorcyclesIndexRoute: typeof MotorcyclesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +260,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs': {
+      id: '/jobs'
+      path: '/jobs'
+      fullPath: '/jobs'
+      preLoaderRoute: typeof JobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/maintenance': {
+      id: '/maintenance'
+      path: '/maintenance'
+      fullPath: '/maintenance'
+      preLoaderRoute: typeof MaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner': {
+      id: '/partner'
+      path: '/partner'
+      fullPath: '/partner'
+      preLoaderRoute: typeof PartnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/dashboard'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/earnings': {
+      id: '/dashboard/earnings'
+      path: '/dashboard/earnings'
+      fullPath: '/dashboard/earnings'
+      preLoaderRoute: typeof DashboardEarningsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/jobs': {
+      id: '/dashboard/jobs'
+      path: '/dashboard/jobs'
+      fullPath: '/dashboard/jobs'
+      preLoaderRoute: typeof DashboardJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/maintenance': {
+      id: '/dashboard/maintenance'
+      path: '/dashboard/maintenance'
+      fullPath: '/dashboard/maintenance'
+      preLoaderRoute: typeof DashboardMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/motorcycle': {
+      id: '/dashboard/motorcycle'
+      path: '/dashboard/motorcycle'
+      fullPath: '/dashboard/motorcycle'
+      preLoaderRoute: typeof DashboardMotorcycleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/notifications': {
+      id: '/dashboard/notifications'
+      path: '/dashboard/notifications'
+      fullPath: '/dashboard/notifications'
+      preLoaderRoute: typeof DashboardNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/profile': {
+      id: '/dashboard/profile'
+      path: '/dashboard/profile'
+      fullPath: '/dashboard/profile'
+      preLoaderRoute: typeof DashboardProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/rental': {
+      id: '/dashboard/rental'
+      path: '/dashboard/rental'
+      fullPath: '/dashboard/rental'
+      preLoaderRoute: typeof DashboardRentalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/support': {
+      id: '/dashboard/support'
+      path: '/dashboard/support'
+      fullPath: '/dashboard/support'
+      preLoaderRoute: typeof DashboardSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/motorcycles/': {
+      id: '/motorcycles/'
+      path: '/motorcycles'
+      fullPath: '/motorcycles/'
+      preLoaderRoute: typeof MotorcyclesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/motorcycles/$bikeId': {
+      id: '/motorcycles/$bikeId'
+      path: '/motorcycles/$bikeId'
+      fullPath: '/motorcycles/$bikeId'
+      preLoaderRoute: typeof MotorcyclesBikeIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  JobsRoute: JobsRoute,
+  MaintenanceRoute: MaintenanceRoute,
+  OnboardingRoute: OnboardingRoute,
+  PartnerRoute: PartnerRoute,
+  DashboardEarningsRoute: DashboardEarningsRoute,
+  DashboardJobsRoute: DashboardJobsRoute,
+  DashboardMaintenanceRoute: DashboardMaintenanceRoute,
+  DashboardMotorcycleRoute: DashboardMotorcycleRoute,
+  DashboardNotificationsRoute: DashboardNotificationsRoute,
+  DashboardProfileRoute: DashboardProfileRoute,
+  DashboardRentalRoute: DashboardRentalRoute,
+  DashboardSupportRoute: DashboardSupportRoute,
+  MotorcyclesBikeIdRoute: MotorcyclesBikeIdRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
+  MotorcyclesIndexRoute: MotorcyclesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
