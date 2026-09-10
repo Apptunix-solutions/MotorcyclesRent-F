@@ -39,6 +39,7 @@ export function SiteNav() {
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
+          <ThemeToggle />
           <Link
             to="/dashboard"
             className="hidden rounded-md px-3 py-2 text-sm font-semibold text-graphite-foreground/80 transition-colors hover:text-graphite-foreground sm:inline-flex"
