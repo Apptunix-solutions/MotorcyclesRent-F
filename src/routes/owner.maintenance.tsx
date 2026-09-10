@@ -48,7 +48,9 @@ function OwnerMaintenance() {
         {providers.map((p) => (
           <article key={p.id} className="surface-card p-5">
             <h3 className="text-base font-bold">{p.name}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{p.location}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {p.area} · {p.distanceKm} km · from {formatEGP(p.startingPrice)}
+            </p>
           </article>
         ))}
       </div>
