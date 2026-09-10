@@ -22,7 +22,7 @@ const payments = [
 ];
 
 function RentalPage() {
-  const bike = MOTORCYCLES[0];
+  const bike = MOTORCYCLES[0]!;
 
   return (
     <DashboardShell role="rider" title="Rental" subtitle="Your agreement, payments and renewal date.">

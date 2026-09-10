@@ -15,7 +15,7 @@ export const Route = createFileRoute("/dashboard/motorcycle")({
 });
 
 function MyMotorcycle() {
-  const bike = MOTORCYCLES[0];
+  const bike = MOTORCYCLES[0]!;
 
   return (
     <DashboardShell role="rider" title="My motorcycle" subtitle="Everything about your current rental bike.">
