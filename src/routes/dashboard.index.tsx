@@ -16,7 +16,7 @@ export const Route = createFileRoute("/dashboard/")({
 });
 
 function RiderOverview() {
-  const bike = MOTORCYCLES[0];
+  const bike = MOTORCYCLES[0]!;
   const jobs = JOBS.slice(0, 3);
 
   return (

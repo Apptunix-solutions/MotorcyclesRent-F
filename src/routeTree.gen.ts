@@ -26,6 +26,15 @@ import { Route as DashboardRentalRouteImport } from './routes/dashboard.rental'
 import { Route as DashboardSupportRouteImport } from './routes/dashboard.support'
 import { Route as MotorcyclesIndexRouteImport } from './routes/motorcycles.index'
 import { Route as MotorcyclesBikeIdRouteImport } from './routes/motorcycles.$bikeId'
+import { Route as OwnerIndexRouteImport } from './routes/owner.index'
+import { Route as OwnerActiveRouteImport } from './routes/owner.active'
+import { Route as OwnerAddMotorcycleRouteImport } from './routes/owner.add-motorcycle'
+import { Route as OwnerEarningsRouteImport } from './routes/owner.earnings'
+import { Route as OwnerMaintenanceRouteImport } from './routes/owner.maintenance'
+import { Route as OwnerMessagesRouteImport } from './routes/owner.messages'
+import { Route as OwnerMotorcyclesRouteImport } from './routes/owner.motorcycles'
+import { Route as OwnerProfileRouteImport } from './routes/owner.profile'
+import { Route as OwnerRequestsRouteImport } from './routes/owner.requests'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -112,6 +121,51 @@ const MotorcyclesBikeIdRoute = MotorcyclesBikeIdRouteImport.update({
   path: '/motorcycles/$bikeId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OwnerIndexRoute = OwnerIndexRouteImport.update({
+  id: '/owner/',
+  path: '/owner/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerActiveRoute = OwnerActiveRouteImport.update({
+  id: '/owner/active',
+  path: '/owner/active',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerAddMotorcycleRoute = OwnerAddMotorcycleRouteImport.update({
+  id: '/owner/add-motorcycle',
+  path: '/owner/add-motorcycle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerEarningsRoute = OwnerEarningsRouteImport.update({
+  id: '/owner/earnings',
+  path: '/owner/earnings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerMaintenanceRoute = OwnerMaintenanceRouteImport.update({
+  id: '/owner/maintenance',
+  path: '/owner/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerMessagesRoute = OwnerMessagesRouteImport.update({
+  id: '/owner/messages',
+  path: '/owner/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerMotorcyclesRoute = OwnerMotorcyclesRouteImport.update({
+  id: '/owner/motorcycles',
+  path: '/owner/motorcycles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerProfileRoute = OwnerProfileRouteImport.update({
+  id: '/owner/profile',
+  path: '/owner/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerRequestsRoute = OwnerRequestsRouteImport.update({
+  id: '/owner/requests',
+  path: '/owner/requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -129,8 +183,17 @@ export interface FileRoutesByFullPath {
   '/dashboard/rental': typeof DashboardRentalRoute
   '/dashboard/support': typeof DashboardSupportRoute
   '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/owner/active': typeof OwnerActiveRoute
+  '/owner/add-motorcycle': typeof OwnerAddMotorcycleRoute
+  '/owner/earnings': typeof OwnerEarningsRoute
+  '/owner/maintenance': typeof OwnerMaintenanceRoute
+  '/owner/messages': typeof OwnerMessagesRoute
+  '/owner/motorcycles': typeof OwnerMotorcyclesRoute
+  '/owner/profile': typeof OwnerProfileRoute
+  '/owner/requests': typeof OwnerRequestsRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/motorcycles/': typeof MotorcyclesIndexRoute
+  '/owner/': typeof OwnerIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -148,8 +211,17 @@ export interface FileRoutesByTo {
   '/dashboard/rental': typeof DashboardRentalRoute
   '/dashboard/support': typeof DashboardSupportRoute
   '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/owner/active': typeof OwnerActiveRoute
+  '/owner/add-motorcycle': typeof OwnerAddMotorcycleRoute
+  '/owner/earnings': typeof OwnerEarningsRoute
+  '/owner/maintenance': typeof OwnerMaintenanceRoute
+  '/owner/messages': typeof OwnerMessagesRoute
+  '/owner/motorcycles': typeof OwnerMotorcyclesRoute
+  '/owner/profile': typeof OwnerProfileRoute
+  '/owner/requests': typeof OwnerRequestsRoute
   '/dashboard': typeof DashboardIndexRoute
   '/motorcycles': typeof MotorcyclesIndexRoute
+  '/owner': typeof OwnerIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -168,8 +240,17 @@ export interface FileRoutesById {
   '/dashboard/rental': typeof DashboardRentalRoute
   '/dashboard/support': typeof DashboardSupportRoute
   '/motorcycles/$bikeId': typeof MotorcyclesBikeIdRoute
+  '/owner/active': typeof OwnerActiveRoute
+  '/owner/add-motorcycle': typeof OwnerAddMotorcycleRoute
+  '/owner/earnings': typeof OwnerEarningsRoute
+  '/owner/maintenance': typeof OwnerMaintenanceRoute
+  '/owner/messages': typeof OwnerMessagesRoute
+  '/owner/motorcycles': typeof OwnerMotorcyclesRoute
+  '/owner/profile': typeof OwnerProfileRoute
+  '/owner/requests': typeof OwnerRequestsRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/motorcycles/': typeof MotorcyclesIndexRoute
+  '/owner/': typeof OwnerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -189,8 +270,17 @@ export interface FileRouteTypes {
     | '/dashboard/rental'
     | '/dashboard/support'
     | '/motorcycles/$bikeId'
+    | '/owner/active'
+    | '/owner/add-motorcycle'
+    | '/owner/earnings'
+    | '/owner/maintenance'
+    | '/owner/messages'
+    | '/owner/motorcycles'
+    | '/owner/profile'
+    | '/owner/requests'
     | '/dashboard/'
     | '/motorcycles/'
+    | '/owner/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -208,8 +298,17 @@ export interface FileRouteTypes {
     | '/dashboard/rental'
     | '/dashboard/support'
     | '/motorcycles/$bikeId'
+    | '/owner/active'
+    | '/owner/add-motorcycle'
+    | '/owner/earnings'
+    | '/owner/maintenance'
+    | '/owner/messages'
+    | '/owner/motorcycles'
+    | '/owner/profile'
+    | '/owner/requests'
     | '/dashboard'
     | '/motorcycles'
+    | '/owner'
   id:
     | '__root__'
     | '/'
@@ -227,8 +326,17 @@ export interface FileRouteTypes {
     | '/dashboard/rental'
     | '/dashboard/support'
     | '/motorcycles/$bikeId'
+    | '/owner/active'
+    | '/owner/add-motorcycle'
+    | '/owner/earnings'
+    | '/owner/maintenance'
+    | '/owner/messages'
+    | '/owner/motorcycles'
+    | '/owner/profile'
+    | '/owner/requests'
     | '/dashboard/'
     | '/motorcycles/'
+    | '/owner/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -247,8 +355,17 @@ export interface RootRouteChildren {
   DashboardRentalRoute: typeof DashboardRentalRoute
   DashboardSupportRoute: typeof DashboardSupportRoute
   MotorcyclesBikeIdRoute: typeof MotorcyclesBikeIdRoute
+  OwnerActiveRoute: typeof OwnerActiveRoute
+  OwnerAddMotorcycleRoute: typeof OwnerAddMotorcycleRoute
+  OwnerEarningsRoute: typeof OwnerEarningsRoute
+  OwnerMaintenanceRoute: typeof OwnerMaintenanceRoute
+  OwnerMessagesRoute: typeof OwnerMessagesRoute
+  OwnerMotorcyclesRoute: typeof OwnerMotorcyclesRoute
+  OwnerProfileRoute: typeof OwnerProfileRoute
+  OwnerRequestsRoute: typeof OwnerRequestsRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   MotorcyclesIndexRoute: typeof MotorcyclesIndexRoute
+  OwnerIndexRoute: typeof OwnerIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -372,6 +489,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MotorcyclesBikeIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/owner/': {
+      id: '/owner/'
+      path: '/owner'
+      fullPath: '/owner/'
+      preLoaderRoute: typeof OwnerIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/active': {
+      id: '/owner/active'
+      path: '/owner/active'
+      fullPath: '/owner/active'
+      preLoaderRoute: typeof OwnerActiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/add-motorcycle': {
+      id: '/owner/add-motorcycle'
+      path: '/owner/add-motorcycle'
+      fullPath: '/owner/add-motorcycle'
+      preLoaderRoute: typeof OwnerAddMotorcycleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/earnings': {
+      id: '/owner/earnings'
+      path: '/owner/earnings'
+      fullPath: '/owner/earnings'
+      preLoaderRoute: typeof OwnerEarningsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/maintenance': {
+      id: '/owner/maintenance'
+      path: '/owner/maintenance'
+      fullPath: '/owner/maintenance'
+      preLoaderRoute: typeof OwnerMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/messages': {
+      id: '/owner/messages'
+      path: '/owner/messages'
+      fullPath: '/owner/messages'
+      preLoaderRoute: typeof OwnerMessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/motorcycles': {
+      id: '/owner/motorcycles'
+      path: '/owner/motorcycles'
+      fullPath: '/owner/motorcycles'
+      preLoaderRoute: typeof OwnerMotorcyclesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/profile': {
+      id: '/owner/profile'
+      path: '/owner/profile'
+      fullPath: '/owner/profile'
+      preLoaderRoute: typeof OwnerProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/requests': {
+      id: '/owner/requests'
+      path: '/owner/requests'
+      fullPath: '/owner/requests'
+      preLoaderRoute: typeof OwnerRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -391,8 +571,17 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRentalRoute: DashboardRentalRoute,
   DashboardSupportRoute: DashboardSupportRoute,
   MotorcyclesBikeIdRoute: MotorcyclesBikeIdRoute,
+  OwnerActiveRoute: OwnerActiveRoute,
+  OwnerAddMotorcycleRoute: OwnerAddMotorcycleRoute,
+  OwnerEarningsRoute: OwnerEarningsRoute,
+  OwnerMaintenanceRoute: OwnerMaintenanceRoute,
+  OwnerMessagesRoute: OwnerMessagesRoute,
+  OwnerMotorcyclesRoute: OwnerMotorcyclesRoute,
+  OwnerProfileRoute: OwnerProfileRoute,
+  OwnerRequestsRoute: OwnerRequestsRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   MotorcyclesIndexRoute: MotorcyclesIndexRoute,
+  OwnerIndexRoute: OwnerIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
