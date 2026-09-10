@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Bike, Briefcase, Home, LayoutDashboard, Menu, Wrench, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const publicLinks = [
   { to: "/motorcycles", label: "Motorcycles" },
