@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Bike, Briefcase, Home, LayoutDashboard, Menu, Wrench, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const publicLinks = [
   { to: "/motorcycles", label: "Motorcycles" },
@@ -38,6 +39,7 @@ export function SiteNav() {
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
+          <ThemeToggle />
           <Link
             to="/dashboard"
             className="hidden rounded-md px-3 py-2 text-sm font-semibold text-graphite-foreground/80 transition-colors hover:text-graphite-foreground sm:inline-flex"
